@@ -31,6 +31,12 @@ inline constexpr bool is_bit_set(_IntT i, _SmallIntT n) {
     return i & (1 << (n - 1));
 }
 
+/// Checks whether the bit at position n is set
+template<typename _IntT, typename _SmallIntT>
+inline constexpr bool is_bit_not_set(_IntT i, _SmallIntT n) {
+    return !is_bit_set(i, n);
+}
+
 /// Checks whether all bits in the mask are set in i
 template<typename _IntT>
 inline constexpr bool is_bitmask_set(_IntT i, _IntT mask) {
