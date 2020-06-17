@@ -1,6 +1,8 @@
 #ifndef BITOPS_H
 #define BITOPS_H
 
+namespace bitops {
+
 /// Flips the bit at position n
 template<typename _IntT, typename _SmallIntT>
 inline _IntT& bit_flip(_IntT& i, _SmallIntT n) {
@@ -41,6 +43,8 @@ inline constexpr bool is_bit_not_set(_IntT i, _SmallIntT n) {
 template<typename _IntT>
 inline constexpr bool is_bitmask_set(_IntT i, _IntT mask) {
     return (i & mask) == mask;
+}
+
 }
 
 #endif // BITOPS_H
